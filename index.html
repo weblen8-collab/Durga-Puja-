@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>PujaMap — Discover Durga Puja</title>
+
+  <meta name="description"
+        content="Discover Durga Puja pandals, committees, locations and photos.">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+
+    <div class="logo">
+      <span class="logo-icon">🪔</span>
+      <div>
+        <h1>PujaMap</h1>
+        <p>Discover • Explore • Celebrate</p>
+      </div>
+    </div>
+
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+  </header>
+
+
+  <!-- MOBILE MENU -->
+  <nav id="mobileMenu" class="mobile-menu">
+
+    <a href="#home">Home</a>
+    <a href="#popular">Popular</a>
+    <a href="#explore">Explore</a>
+    <a href="#about">About</a>
+
+  </nav>
+
+
+  <!-- HERO -->
+  <main id="home">
+
+    <section class="hero">
+
+      <div class="hero-content">
+
+        <span class="badge">🛕 Durga Puja 2026</span>
+
+        <h2>
+          Discover the
+          <span>Best Puja Pandals</span>
+          Near You
+        </h2>
+
+        <p>
+          Explore beautiful Durga Puja pandals, committee profiles,
+          photos and locations — all in one place.
+        </p>
+
+        <!-- SEARCH -->
+        <div class="search-box">
+
+          <span>🔍</span>
+
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search Puja or location..."
+            onkeyup="searchPuja()"
+          >
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CATEGORY -->
+    <section class="categories">
+
+      <div class="section-heading">
+        <div>
+          <span class="small-title">EXPLORE</span>
+          <h2>Find Your Puja</h2>
+        </div>
+      </div>
+
+      <div class="category-scroll">
+
+        <button class="category active">
+          🛕 All
+        </button>
+
+        <button class="category">
+          📍 Kolkata
+        </button>
+
+        <button class="category">
+          📍 Kharagpur
+        </button>
+
+        <button class="category">
+          📍 Midnapore
+        </button>
+
+        <button class="category">
+          📍 Jhargram
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- POPULAR -->
+    <section id="popular" class="puja-section">
+
+      <div class="section-heading">
+
+        <div>
+          <span class="small-title">TRENDING</span>
+          <h2>Popular Pandals</h2>
+        </div>
+
+        <button class="view-btn">
+          View All →
+        </button>
+
+      </div>
+
+
+      <!-- PUJA GRID -->
+      <div id="pujaGrid" class="puja-grid">
+
+
+        <!-- CARD 1 -->
+        <article class="puja-card">
+
+          <div class="image-container">
+
+            <img
+              src="https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=800&q=80"
+              alt="Durga Puja Pandal"
+            >
+
+            <span class="location-tag">
+              📍 Kharagpur
+            </span>
+
+            <button
+              class="like-btn"
+              onclick="likePuja(this)"
+            >
+              ♡
+            </button>
+
+          </div>
+
+
+          <div class="card-content">
+
+            <span class="card-category">
+              Durga Puja
+            </span>
+
+            <h3>Kharagpur Central Puja</h3>
+
+            <p class="committee">
+              🏛️ Central Puja Committee
+            </p>
+
+            <div class="card-bottom">
+
+              <span class="likes">
+                ❤️ <span class="like-count">245</span>
+              </span>
+
+              <button class="details-btn">
+                Explore →
+              </button>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- CARD 2 -->
+        <article class="puja-card">
+
+          <div class="image-container">
+
+            <img
+              src="https://images.unsplash.com/photo-1577083552431-6e5fd01988a5?auto=format&fit=crop&w=800&q=80"
+              alt="Puja Pandal"
+            >
+
+            <span class="location-tag">
+              📍 Kolkata
+            </span>
+
+            <button
+              class="like-btn"
+              onclick="likePuja(this)"
+            >
+              ♡
+            </button>
+
+          </div>
+
+
+          <div class="card-content">
+
+            <span class="card-category">
+              Durga Puja
+            </span>
+
+            <h3>Kolkata Heritage Puja</h3>
+
+            <p class="committee">
+              🏛️ Heritage Puja Committee
+            </p>
+
+            <div class="card-bottom">
+
+              <span class="likes">
+                ❤️ <span class="like-count">189</span>
+              </span>
+
+              <button class="details-btn">
+                Explore →
+              </button>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- CARD 3 -->
+        <article class="puja-card">
+
+          <div class="image-container">
+
+            <img
+              src="https://images.unsplash.com/photo-1566847438217-76e82d383f84?auto=format&fit=crop&w=800&q=80"
+              alt="Durga Puja"
+            >
+
+            <span class="location-tag">
+              📍 Midnapore
+            </span>
+
+            <button
+              class="like-btn"
+              onclick="likePuja(this)"
+            >
+              ♡
+            </button>
+
+          </div>
+
+
+          <div class="card-content">
+
+            <span class="card-category">
+              Durga Puja
+            </span>
+
+            <h3>Midnapore Youth Puja</h3>
+
+            <p class="committee">
+              🏛️ Youth Puja Committee
+            </p>
+
+            <div class="card-bottom">
+
+              <span class="likes">
+                ❤️ <span class="like-count">156</span>
+              </span>
+
+              <button class="details-btn">
+                Explore →
+              </button>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- WHY PUJAMAP -->
+    <section id="about" class="why-section">
+
+      <span class="small-title">WHY PUJAMAP</span>
+
+      <h2>
+        Your Guide to
+        <span>Durga Puja</span>
+      </h2>
+
+      <p>
+        Find beautiful pandals, discover local Puja committees,
+        explore locations and share your favourite celebrations.
+      </p>
+
+
+      <div class="feature-grid">
+
+        <div class="feature">
+          <div class="feature-icon">📸</div>
+          <h3>Beautiful Photos</h3>
+          <p>Discover amazing Puja pandals.</p>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon">📍</div>
+          <h3>Easy Location</h3>
+          <p>Find the exact Puja location.</p>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon">❤️</div>
+          <h3>Like & Share</h3>
+          <p>Support your favourite Puja.</p>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon">🏛️</div>
+          <h3>Committee Profile</h3>
+          <p>Know more about each committee.</p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- CTA -->
+    <section class="cta">
+
+      <div>
+
+        <span>FOR PUJA COMMITTEES</span>
+
+        <h2>
+          Want to list your Puja?
+        </h2>
+
+        <p>
+          Add your Puja committee, photos and location
+          to PujaMap.
+        </p>
+
+        <button onclick="showComingSoon()">
+          Add Your Puja →
+        </button>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="footer-logo">
+      🪔 <strong>PujaMap</strong>
+    </div>
+
+    <p>
+      Discover • Explore • Celebrate
+    </p>
+
+    <div class="footer-links">
+
+      <a href="#home">Home</a>
+      <a href="#popular">Pujas</a>
+      <a href="#about">About</a>
+
+    </div>
+
+    <p class="copyright">
+      © 2026 PujaMap. Made with ❤️ for Puja lovers.
+    </p>
+
+  </footer>
+
+
+  <!-- JAVASCRIPT -->
+  <script src="script.js"></script>
+
+</body>
+</html>
